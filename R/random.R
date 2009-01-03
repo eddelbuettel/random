@@ -1,11 +1,11 @@
 
-# $Id: random.R,v 1.1 2006/08/16 02:07:53 edd Exp $
+# $Id: random.R,v 1.2 2007/04/26 01:57:39 edd Exp $
 
 randomBufferStatus <- function() {
   urltxt <- "http://www.random.org/cgi-bin/checkbuf"
   checkBuf <- read.table(file=urltxt, as.is=TRUE)
   ## strip trailing '%', and dividide by 100 so that '45%' becomes 0.45
-  pct <- as.numeric(gsub('\%','', checkBuf))/100
+  pct <- as.numeric(gsub('%','', checkBuf))/100
   names(pct) <- 'checkbuf'
   return(pct)
 }
