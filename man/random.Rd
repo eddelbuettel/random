@@ -2,27 +2,34 @@
 \alias{random}
 \alias{randomNumbers}
 \alias{randomSequence}
-\alias{randomBytes}
-\alias{randomBufferStatus}
-\alias{sufficientBits}
+%\alias{randomBytes}
+\alias{randomStrings}
+%\alias{randomBufferStatus}
+%\alias{sufficientBits}
+\alias{randomQuota}
+\alias{quotaCheck}
 \title{True random numbers from random.org}
 \description{
-  The \code{random} packages provides several functions that
+  The \code{random} package provides several functions that
   access the true random number service at \url{http://random.org}.
 
   \code{randomNumber} retrieves random integers with duplicates,
   \code{randomSequence} retrieves random sequences without
-  duplicates, \code{randomBytes} retrieves raw bytes and
-  \code{randomBufferStatus} retrieves the status of the service, and
-  \code{sufficientBits} returns a logical value indicating whether the
-  service has random bits in excess of a threshold value.
+  duplicates and \code{randomStrings} retrieves strings.
+
+  \code{randomQuota} returns the number of available retrievals, and
+  \code{quotaCheck} does a simple binary comparison of remaining numbers
+  under the quota.
 }
 \usage{
-   randomNumbers(n=100, min=1, max=100, col=5, check=TRUE)
+   randomNumbers(n=100, min=1, max=100, col=5, base=10, check=TRUE)
    randomSequence(min=1, max=20, check=TRUE)
-   randomBytes(n=16, format=c("hex","dec","oct","bin"), check=TRUE)
-   randomBufferStatus()
-   sufficientBits()
+   randomStrings(n=10, len=5, digits=TRUE, upperalpha=TRUE, loweralpha=TRUE, unique=TRUE, check=TRUE)
+%   randomBytes(n=16, format=c("hex","dec","oct","bin"), check=TRUE)
+%   randomBufferStatus()
+%   sufficientBits()
+   randomQuota()
+   quotaCheck()
 }
 \arguments{
   \item{n}{The number of random integers, or bytes, to be
@@ -30,22 +37,28 @@
   \item{min}{The minimum value for the returned numbers.}
   \item{max}{The maximum value for the returned numbers.}
   \item{col}{The number of columns for the return object.}
-  \item{check}{Boolean whether buffer size at server should be tested.}
-  \item{format}{The desired format for the raw bytes.}
+  \item{base}{The base for the random numbers: one of 2, 8, 10 or 16.}
+  \item{len}{The length of strings returned by randomStrings().}
+  \item{digits}{Select whether digits are part of random strings.}
+  \item{upperalpha}{Select whether uppercase characters part of random strings.}
+  \item{loweralpha}{Select whether lowercase characters part of random strings.}
+  \item{unique}{Select whether random strings must be unique.}
+  \item{check}{Select whether quota at server should be checked first.}
 }
 \value{
-  Each function returns a \code{data.frame}.
+  Each function returns a \code{matrix}.
   For \code{randomNumbers}, it contains \code{col} columns of
   a total of \code{n} integers between \code{min} and
   \code{max}, possibly containing duplicates.  For
   \code{randomSequence}, it contains the shuffled sequence
   denoted by \code{min} and \code{max}. For
-  \code{randomBytes}, \code{n} raw bytes in the selected
-  format are returned. Lastly, \code{randomBufferStatus}
-  returns the status of the service as a percentage.
-  \code{sufficientBits} is a simple convenience wrapper which tests
-  whether the return from \code{randomBufferStatus()} is at least 0.2 in
-  value.
+  \code{randomStrings}, \code{n} strings of length \code{len}
+  are returned.
+
+  \code{randomQuota} returns the number of bits remaining for retrieval
+  at the given day under the currently used IP address.
+  \code{quotaCheck} is a simple convenience wrapper which tests
+  whether the return from \code{randomBufferStatus()} is a positive number.
 } \details{
   The \url{http://random.org} services uses atmospheric noise sample
   via a radio tuned to an unused broadcast frequency together with a
