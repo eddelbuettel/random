@@ -1,0 +1,23 @@
+2006-08-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/doc/random-essay.Rnw: first full draft
+
+2006-08-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/random.R: some more polishing
+	
+2006-07-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/doc/random-essay.Rnw: more spit and polish for vignette
+	based on the essay.html document by Mads Haahr (from 1999)
+
+2006-07-28  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION, man/*, R/*, inst/*: turned into a proper R package
+
+2006-05-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* randomOrg.R: wrote a few simple function to access
+	http://random.org via R's read.file URL access
+
+
