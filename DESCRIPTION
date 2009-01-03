@@ -1,6 +1,6 @@
 Package: random
-Version: 0.1.1
-Date: $Date: 2006/08/16 02:07:37 $
+Version: 0.1.2
+Date: $Date: 2007/04/26 18:37:53 $
 Author: Dirk Eddelbuettel <edd@debian.org>
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Title: True random numbers using random.org
@@ -16,4 +16,4 @@ Description: This package provides an interface to the true random number
 Depends: R (>= 2.5.0)
 License: GPL Version 2 
 URL: http://www.random.org
-Packaged: Wed Apr 25 21:00:46 2007; edd
+Packaged: Thu Apr 26 13:39:35 2007; edd

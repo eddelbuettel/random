@@ -1,5 +1,14 @@
+2007-04-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* 0.1.2 release
+	
+	* inst/doc/random-intro.Rnw: Fix two small snafus to enable proper
+	processing of the vignette; thanks to Kurt Hornik for the heads-up
+
 2007-04-25  Dirk Eddelbuettel  <edd@debian.org>
 
+	* 0.1.1 release
+	
 	* R/random.R: Use '%' in gsub(), not '\%'
 
 2006-08-15  Dirk Eddelbuettel  <edd@debian.org>

@@ -1,5 +1,5 @@
 
-% $Id: random-intro.Rnw,v 1.1 2006/08/16 02:08:22 edd Exp $
+% $Id: random-intro.Rnw,v 1.2 2007/04/26 18:37:01 edd Exp $
 
 \documentclass[11pt]{article}
 \usepackage{vmargin,url,hyperref,booktabs,graphicx}
@@ -43,7 +43,7 @@
 
 
 <<preliminaries,echo=FALSE,results=hide>>=
-library(lmtest)
+library(random)
 options(SweaveHooks=list(twofig=function() {par(mfrow=c(1,2))},
                          twofig2=function() {par(mfrow=c(2,1))},
                          onefig=function() {par(mfrow=c(1,1))}))
@@ -341,7 +341,7 @@ the cache file is still present.
 ## and b) data at random.org
 if ( !(file.exists("random.Rdata")) ) {
   randomOrg <- randomNumbers(n=5000, min=1, max=1e6, col=2)/1e6
-  save("random.Rdata", randomOrg)
+  save(randomOrg, file="random.Rdata")
 } else {
   load("random.Rdata")
 }
