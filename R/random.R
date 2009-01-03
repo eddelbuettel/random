@@ -1,20 +1,6 @@
 
 # $Id$
 
-## randomBufferStatus <- function() {
-##   urltxt <- "http://www.random.org/cgi-bin/checkbuf"
-##   checkBuf <- read.table(file=urltxt, as.is=TRUE)
-##   ## strip trailing '%', and dividide by 100 so that '45%' becomes 0.45
-##   pct <- as.numeric(gsub('%','', checkBuf))/100
-##   names(pct) <- 'checkbuf'
-##   return(pct)
-## }
-
-## sufficientBits <- function() {
-##   ## following Haahr's suggestion, we compare to a level of 20\%
-##   return( randomBufferStatus() >= 0.2 )
-## }
-
 randomQuota <- function() {
     urltxt <- "http://random.org/quota/?format=plain"
     ##quota <- read.table(file=urltxt, as.is=TRUE, header=FALSE, nrows=1)
@@ -67,24 +53,6 @@ randomSequence <- function(min=1, max=20, check=TRUE) {
     randSeq <- as.matrix(read.table(file=urltxt, as.is=TRUE))
     return(randSeq)
 }
-
-## randomBytes <- function(n=16, format=c("hex","dec","oct", "bin"), check=TRUE) {
-##   if (n < 16 || n > 16384)
-##     stop("Random bytes requests must be between 16 and 16,384 bytes")
-##   if (n %% 16 !=0)
-##     stop("Random bytes request size must be divisible by 16")
-
-##   format <- match.arg(format)
-
-##   urlbase <- "http://random.org/cgi-bin/"
-##   urltxt <- paste(urlbase,
-##                   "randbyte?nbytes=", n,
-##                   "&format=", format,
-##                   sep="")
-
-##   randBytes <- as.matrix(read.table(file=urltxt))
-##   return(randBytes)
-## }
 
 randomStrings <- function(n=10, len=5, digits=TRUE, upperalpha=TRUE, loweralpha=TRUE, unique=TRUE, check=TRUE) {
     if (n < 1 || n > 1e4)
