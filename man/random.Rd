@@ -2,10 +2,7 @@
 \alias{random}
 \alias{randomNumbers}
 \alias{randomSequence}
-%\alias{randomBytes}
 \alias{randomStrings}
-%\alias{randomBufferStatus}
-%\alias{sufficientBits}
 \alias{randomQuota}
 \alias{quotaCheck}
 \title{True random numbers from random.org}
@@ -25,9 +22,6 @@
    randomNumbers(n=100, min=1, max=100, col=5, base=10, check=TRUE)
    randomSequence(min=1, max=20, check=TRUE)
    randomStrings(n=10, len=5, digits=TRUE, upperalpha=TRUE, loweralpha=TRUE, unique=TRUE, check=TRUE)
-%   randomBytes(n=16, format=c("hex","dec","oct","bin"), check=TRUE)
-%   randomBufferStatus()
-%   sufficientBits()
    randomQuota()
    quotaCheck()
 }
