@@ -20,7 +20,7 @@
 }
 \usage{
    randomNumbers(n=100, min=1, max=100, col=5, base=10, check=TRUE)
-   randomSequence(min=1, max=20, check=TRUE)
+   randomSequence(min=1, max=20, col=1, check=TRUE)
    randomStrings(n=10, len=5, digits=TRUE, upperalpha=TRUE, loweralpha=TRUE, unique=TRUE, check=TRUE)
    randomQuota()
    quotaCheck()

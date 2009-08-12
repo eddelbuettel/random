@@ -37,7 +37,7 @@ randomNumbers <- function(n=100, min=1, max=100, col=5, base=10, check=TRUE) {
     return(randNum)
 }
 
-randomSequence <- function(min=1, max=20, check=TRUE) {
+randomSequence <- function(min=1, max=20, col=1, check=TRUE) {
     if (min < -1e9 | max > 1e9 | min > max)
         stop(paste("Random sequence range must be between -1000,000,000",
                    "and 1000,000,000"))
@@ -47,6 +47,7 @@ randomSequence <- function(min=1, max=20, check=TRUE) {
     urltxt <- paste(urlbase,
                     "?min=", min,
                     "&max=", max,
+                    "&col=", col,
                     "&format=plain",
                     "&rnd=new",
                     sep="")

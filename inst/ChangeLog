@@ -1,6 +1,14 @@
+2009-08-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Release 0.2.1 
+
+	* R/random.R: Added missing 'cols' default argument to randomSequence,
+	  with thanks to Lynn Amon for spotting this.
+	* man/random.Rd: Documentation updated accordingly
+
 2009-01-04  Dirk Eddelbuettel  <edd@debian.org>
 
-	* DESCRIPTION: Release 0.2.0 
+	* DESCRIPTION: Release 0.2.0
 
 	* R/random.R: Changed code for new API provided by Mads at random.org
 	* man/random.Rd: Documentation updated accordingly
