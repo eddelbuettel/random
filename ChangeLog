@@ -1,6 +1,15 @@
+2013-12-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Release 0.2.2
+
+	* vignettes/*: Moved files from inst/doc/
+
+	* .travis.yml: Added for Github / Travis support
+	* .gitignore: Added for git support
+
 2009-08-11  Dirk Eddelbuettel  <edd@debian.org>
 
-	* DESCRIPTION: Release 0.2.1 
+	* DESCRIPTION: Release 0.2.1
 
 	* R/random.R: Added missing 'cols' default argument to randomSequence,
 	  with thanks to Lynn Amon for spotting this.
