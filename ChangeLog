@@ -4,6 +4,8 @@
 
 	* vignettes/*: Moved files from inst/doc/
 
+	* ChangeLog/*: Moved from inst/
+
 	* .travis.yml: Added for Github / Travis support
 	* .gitignore: Added for git support
 
