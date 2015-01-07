@@ -1,3 +1,10 @@
+2015-01-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/random.R: Switch to using curl() which supports https
+
+	* DESCRIPTION: Added Import: curl; bumped Version: and Date:
+	* NAMESPACE: Import curl from curl
+
 2013-12-10  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION: Release 0.2.2

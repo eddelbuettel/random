@@ -1,4 +1,6 @@
 
+importFrom(curl, curl)
+
 export("randomQuota",
        "quotaCheck",
        "randomNumbers",
