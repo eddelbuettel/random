@@ -1,6 +1,6 @@
 Package: random
-Version: 0.2.2.1
-Date: 2015-01-06
+Version: 0.2.3
+Date: 2015-01-08
 Author: Dirk Eddelbuettel <edd@debian.org>
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Title: True Random Numbers using random.org
@@ -15,4 +15,3 @@ Depends: R (>= 2.8.0)
 Imports: curl
 License: GPL (>= 2)
 URL: https://www.random.org
-
