@@ -1,3 +1,7 @@
+2015-01-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/random.R: Some cleanups, added copyright header
+
 2015-01-06  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/random.R: Switch to using curl() which supports https

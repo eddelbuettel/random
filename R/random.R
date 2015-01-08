@@ -1,4 +1,23 @@
 
+##  random -- An R interface to the random.org service
+##
+##  Copyright (C) 2006 - 2015  Dirk Eddelbuettel <edd@debian.org>
+##
+##  This file is part of random
+##
+##  random is free software: you can redistribute it and/or modify
+##  it under the terms of the GNU General Public License as published by
+##  the Free Software Foundation, either version 2 of the License, or
+##  (at your option) any later version.
+##
+##  random is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##  GNU General Public License for more details.
+##
+##  You should have received a copy of the GNU General Public License
+##  along with random.  If not, see <http://www.gnu.org/licenses/>.
+
 randomQuota <- function() {
     urltxt <- "https://random.org/quota/?format=plain"
     con <- curl(urltxt)
@@ -32,9 +51,7 @@ randomNumbers <- function(n=100, min=1, max=100, col=5, base=10, check=TRUE) {
                     "&format=plain",
                     "&rnd=new",
                     sep="")
-    con <- curl(urltxt)
-    randNum <- as.matrix(read.table(con, as.is=TRUE))
-    #close(con)
+    randNum <- as.matrix(read.table(curl(urltxt, open="r"), as.is=TRUE))
     return(randNum)
 }
 
@@ -52,13 +69,13 @@ randomSequence <- function(min=1, max=20, col=1, check=TRUE) {
                     "&format=plain",
                     "&rnd=new",
                     sep="")
-    con <- curl(urltxt)
-    randSeq <- as.matrix(read.table(con, as.is=TRUE))
-    #close(con)
+    randSeq <- as.matrix(read.table(curl(urltxt, open="r"), as.is=TRUE))
     return(randSeq)
 }
 
-randomStrings <- function(n=10, len=5, digits=TRUE, upperalpha=TRUE, loweralpha=TRUE, unique=TRUE, check=TRUE) {
+randomStrings <- function(n=10, len=5, digits=TRUE,
+                          upperalpha=TRUE, loweralpha=TRUE,
+                          unique=TRUE, check=TRUE) { 
     if (n < 1 || n > 1e4)
         stop("Random string requests must be between 1 and 10,000 numbers")
     if (len < 1 || len > 20)
@@ -81,9 +98,6 @@ randomStrings <- function(n=10, len=5, digits=TRUE, upperalpha=TRUE, loweralpha=
                     "&format=plain",
                     "&rnd=new",
                     sep="")
-    con <- curl(urltxt)
-    randStrings <- as.matrix(read.table(con))
-    #close(con)
+    randStrings <- as.matrix(read.table(curl(urltxt, open="r")))
     return(randStrings)
 }
-
