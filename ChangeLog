@@ -1,5 +1,7 @@
 2015-05-15  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Date): Roll Date and Version
+
 	* R/random.R (fetch): New function to use internal url(...,
 	method="libcurl") with R 3.2.0 or later and libcurl capabilities
 
