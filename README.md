@@ -1,7 +1,9 @@
 
-## random [![Build Status](https://travis-ci.org/eddelbuettel/random.png)](https://travis-ci.org/eddelbuettel/random)
+## random [![Build Status](https://travis-ci.org/eddelbuettel/random.svg)](https://travis-ci.org/eddelbuettel/random) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![Downloads](http://cranlogs.r-pkg.org/badges/random?color=brightgreen)](http://cran.rstudio.com/package=random)
 
 R package for true random numbers from [random.org](https://www.random.org)
+
+### About
 
 This package provides an interface to the true random number service provided
 by the [random.org](https://random.org) website created by Mads Haahr.
