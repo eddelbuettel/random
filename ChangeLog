@@ -1,13 +1,25 @@
+2015-05-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Release 0.2.4
+
+	* tests/minimalTests.R: Added a minimal set of tests -- as we cannot
+	validate the retrieved content but only some coarse summaries
+	* tests/minimalTests.Rout.save: Checks for basic tests
+
+	* R/random.R: fetch() rewritten to get a connection with curl::curl()
+	function, or the internal libcurl method (for R >= 3.2.0), and
+	renamed getConnection() -- with a matching closeConnection()
+
 2015-05-15  Dirk Eddelbuettel  <edd@debian.org>
 
-	* DESCRIPTION (Date): Roll Date and Version
+	* DESCRIPTION: Roll Date and Version
 
 	* R/random.R (fetch): New function to use internal url(...,
 	method="libcurl") with R 3.2.0 or later and libcurl capabilities
 
 2015-01-08  Dirk Eddelbuettel  <edd@debian.org>
 
-	* DESCRIPTION (Date): Release 0.2.3
+	* DESCRIPTION: Release 0.2.3
 
 2015-01-07  Dirk Eddelbuettel  <edd@debian.org>
 
