@@ -18,7 +18,7 @@
 ##  You should have received a copy of the GNU General Public License
 ##  along with random.  If not, see <http://www.gnu.org/licenses/>.
 
-fetch <- function(urltxt, ...) {
+getConnection <- function(urltxt, ...) {
     if (getRversion() >= "3.2.0" && capabilities()["libcurl"]) {
         url(urltxt, ..., method="libcurl")
     } else {
@@ -26,11 +26,20 @@ fetch <- function(urltxt, ...) {
     }
 }
 
+closeConnection <- function(con) {
+    if (getRversion() >= "3.2.0" && capabilities()["libcurl"]) {
+        close(con)
+    } else {
+        ## nothing to be done for curl()
+    }
+}
+
+
 randomQuota <- function() {
     urltxt <- "https://random.org/quota/?format=plain"
-    con <- fetch(urltxt)
+    con <- getConnection(urltxt)
     quota <- as.integer(readLines(con))
-    close(con)
+    closeConnection(con)
     return(quota)
 }
 
@@ -59,7 +68,9 @@ randomNumbers <- function(n=100, min=1, max=100, col=5, base=10, check=TRUE) {
                     "&format=plain",
                     "&rnd=new",
                     sep="")
-    randNum <- as.matrix(read.table(fetch(urltxt, open="r"), as.is=TRUE))
+    con <- getConnection(urltxt, open="r")
+    randNum <- as.matrix(read.table(con, as.is=TRUE))
+    closeConnection(con)
     return(randNum)
 }
 
@@ -77,7 +88,9 @@ randomSequence <- function(min=1, max=20, col=1, check=TRUE) {
                     "&format=plain",
                     "&rnd=new",
                     sep="")
-    randSeq <- as.matrix(read.table(fetch(urltxt, open="r"), as.is=TRUE))
+    con <- getConnection(urltxt, open="r")
+    randSeq <- as.matrix(read.table(con, as.is=TRUE))
+    closeConnection(con)
     return(randSeq)
 }
 
@@ -106,6 +119,8 @@ randomStrings <- function(n=10, len=5, digits=TRUE,
                     "&format=plain",
                     "&rnd=new",
                     sep="")
-    randStrings <- as.matrix(read.table(fetch(urltxt, open="r")))
+    con <- getConnection(urltxt, open="r")
+    randStrings <- as.matrix(read.table(con))
+    closeConnection(con)
     return(randStrings)
 }
