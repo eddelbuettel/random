@@ -36,7 +36,7 @@ closeConnection <- function(con) {
 
 
 randomQuota <- function() {
-    urltxt <- "https://random.org/quota/?format=plain"
+    urltxt <- "https://www.random.org/quota/?format=plain"
     con <- getConnection(urltxt)
     quota <- as.integer(readLines(con))
     closeConnection(con)
@@ -58,7 +58,7 @@ randomNumbers <- function(n=100, min=1, max=100, col=5, base=10, check=TRUE) {
         stop("Base has to be one of 2, 8, 10 or 16")
     if (check && !quotaCheck())
         stop("random.org suggests to wait until tomorrow")
-    urlbase <- "https://random.org/integers/"
+    urlbase <- "https://www.random.org/integers/"
     urltxt <- paste(urlbase,
                     "?num=", format(n, scientific=FALSE),
                     "&min=", format(min, scientific=FALSE),
@@ -80,7 +80,7 @@ randomSequence <- function(min=1, max=20, col=1, check=TRUE) {
                    "and 1000,000,000"))
     if (check && !quotaCheck())
         message("random.org suggests to wait with larger requests")
-    urlbase <- "https://random.org/sequences/"
+    urlbase <- "https://www.random.org/sequences/"
     urltxt <- paste(urlbase,
                     "?min=", min,
                     "&max=", max,
@@ -108,7 +108,7 @@ randomStrings <- function(n=10, len=5, digits=TRUE,
         stop("The 'digits', 'loweralpha' and 'loweralpha' cannot all be false at the same time")
     if (check && !quotaCheck())
         stop("random.org suggests to wait until tomorrow")
-    urlbase <- "https://random.org/strings/"
+    urlbase <- "https://www.random.org/strings/"
     urltxt <- paste(urlbase,
                     "?num=", n,
                     "&len=", len,

@@ -1,5 +1,6 @@
 
 importFrom(curl, curl)
+importFrom(utils, read.table)
 
 export("randomQuota",
        "quotaCheck",
