@@ -5,6 +5,8 @@
 	* tests/minimalTests.R: At request of CRAN, run only if explicitly
 	enabled via environment variable; refactored using stopifnot()
 
+	* .travis.yml: Switch to using run.sh for Travis CI
+
 2015-07-03  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .travis.yml: Install curl via the marutter PPA as r-cran-curl
