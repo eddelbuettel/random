@@ -1,5 +1,7 @@
 2017-02-04  Dirk Eddelbuettel  <edd@max.eddelbuettel.com>
 
+	* DESCRIPTION (Version, Date): Roll minor version
+
 	* tests/minimalTests.R: At request of CRAN, run only if explicitly
 	enabled via environment variable; refactored using stopifnot()
 

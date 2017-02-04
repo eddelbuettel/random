@@ -1,5 +1,5 @@
 
-## random [![Build Status](https://travis-ci.org/eddelbuettel/random.svg)](https://travis-ci.org/eddelbuettel/random) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/random)](http://cran.rstudio.com/package=random) [![Downloads](http://cranlogs.r-pkg.org/badges/random?color=brightgreen)](http://www.r-pkg.org/pkg/random)
+## random [![Build Status](https://travis-ci.org/eddelbuettel/random.svg)](https://travis-ci.org/eddelbuettel/random) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/random)](https://cran.r-project.org/package=random) [![Downloads](http://cranlogs.r-pkg.org/badges/random?color=brightgreen)](http://www.r-pkg.org/pkg/random)
 
 
 R package for true random numbers from [random.org](https://www.random.org)
