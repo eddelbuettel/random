@@ -1,6 +1,6 @@
 Package: random
-Version: 0.2.5.1
-Date: 2017-02-04
+Version: 0.2.6
+Date: 2017-02-05
 Author: Dirk Eddelbuettel <edd@debian.org>
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Title: True Random Numbers using RANDOM.ORG
