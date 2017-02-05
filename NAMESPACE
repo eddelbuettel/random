@@ -1,6 +1,6 @@
 
-importFrom(curl, curl)
-importFrom(utils, read.table)
+importFrom("curl", "curl")
+importFrom("utils", "read.table")
 
 export("randomQuota",
        "quotaCheck",

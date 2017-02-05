@@ -10,8 +10,8 @@ getVectorNewApi <- function(key=getOption("randomOrgAPIkey")) {
                  id      = jsonlite::unbox("123"))
 
     r <- httr::POST("https://api.random.org/json-rpc/1/invoke",
-              body = body,
-              encode="json")
+                    body = body,
+                    encode="json")
     ##verbose())
 
     ##content(r)
