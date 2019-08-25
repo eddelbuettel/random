@@ -1,3 +1,7 @@
+2019-08-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Author): Use name without email as in other packages
+
 2017-02-05  Dirk Eddelbuettel  <edd@max.eddelbuettel.com>
 
 	* DESCRIPTION (Version): Release 0.2.6
