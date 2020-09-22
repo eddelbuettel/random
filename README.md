@@ -1,8 +1,13 @@
 
-## random [![Build Status](https://travis-ci.org/eddelbuettel/random.svg)](https://travis-ci.org/eddelbuettel/random) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/random)](https://cran.r-project.org/package=random) [![Downloads](http://cranlogs.r-pkg.org/badges/random?color=brightgreen)](http://www.r-pkg.org/pkg/random)
+## R package for true random numbers from [random.org](https://www.random.org)
 
+[![Build Status](https://travis-ci.org/eddelbuettel/random.svg)](https://travis-ci.org/eddelbuettel/random) 
+[![License](https://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-2.0.html) 
+[![CRAN](https://www.r-pkg.org/badges/version/random)](https://cran.r-project.org/package=random) 
+[![Dependencies](https://tinyverse.netlify.com/badge/random)](https://cran.r-project.org/package=random)
+[![Downloads](https://cranlogs.r-pkg.org/badges/random?color=brightgreen)](https://www.r-pkg.org/pkg/random)
+[![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/random)](https://github.com/eddelbuettel/random)
 
-R package for true random numbers from [random.org](https://www.random.org)
 
 ### About
 
