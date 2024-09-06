@@ -1,8 +1,8 @@
 Package: random
 Version: 0.2.6.1
 Date: 2021-08-07
-Author: Dirk Eddelbuettel
-Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Authors@R: person("Dirk", "Eddelbuettel", role = c("aut", "cre"), email = "edd@debian.org",
+                  comment = c(ORCID = "0000-0001-6419-907X"))
 Title: True Random Numbers using RANDOM.ORG
 Description: The true random number service provided by the RANDOM.ORG
  website created by Mads Haahr samples atmospheric noise via radio tuned to
