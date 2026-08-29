@@ -31,12 +31,12 @@
 %\VignettePackage{random}
 
 \title{\texttt{random.org}: Introduction to Randomness and Random Numbers}
-\author{\href{http://random.org/mads/}{Mads Haahr}}
+\author{\href{https://www.random.org/mads/}{Mads Haahr}}
 
 \date{June 1999\footnote{ This vignette for the \textsf{R} package
     \texttt{random} is a transcribed version of the original essay by Mads
     Haahr that was published in 1999 and is still available at
-    \href{https://random.org/essay.html}{\url{https://random.org/essay.html}}.
+    \href{https://www.random.org/randomness/}{\url{https://www.random.org/randomness/}}.
     Hyperlinks from the original html document are also present in the pdf
     version.  All errors introduced in the transformation from html to
     \LaTeX\ are solely the responsibility of the \textsf{R} package
@@ -114,11 +114,12 @@ A really good source of entropy is a radioactive source. The points in time
 at which a radioactive source decays are completely unpredictable, and can be
 sampled and fed into a computer, avoiding any buffering mechanisms in the
 operating system. In fact, this is what the
-\href{http://www.fourmilab.ch/hotbits/}{HotBits} people at Fourmilab in
+\href{https://www.fourmilab.ch/hotbits/}{HotBits} people at Fourmilab in
 Switzerland are doing. Another source of entropy could be atmospheric noise
-from a radio, like that used here at \href{http://random.org}{random.org}, or
+from a radio, like that used here at \href{https://www.random.org}{random.org}, or
 even just background noise from an office or laboratory. The
-\href{http://www.lavarnd.org/}{lavarand} people at Silicon Graphics have been
+'lavarand'\footnote{The former site at \texttt{https://www.lavarnd.org/} has
+  vanished.} people at Silicon Graphics have been
 clever enough to use lava lamps to generate random numbers, so their entropy
 source not only gives them entropy, it also looks good! The latest random
 number generator to come online (both lavarand and HotBits precede
@@ -138,7 +139,7 @@ EntropyPool's web server.
 
 \noindent 
 The idea of using atmospheric noise to generate random numbers came up when
-\href{http://www.pentia.dk/}{some friends} and I were building a prototype of
+\href{https://pentia.dk/}{some friends} and I were building a prototype of
 an online gambling system.  Using noise in this way isn't a particularly
 original idea, though. Other people thought of it before us, and as mentioned
 above, there are already several public random number services out there,
@@ -148,10 +149,10 @@ reason is that existing services are mostly for educative purposes --- and
 for fun! I hope random.org will prove itself informative and fun but also
 useful for certain (non-critical) applications that need random numbers.
 Random.org is the only service I know of which offers a large (16K) block of
-numbers at once and which has a \href{http://random.org/corba.html}{CORBA
+numbers at once and which has a \href{https://www.random.org/clients/corba/}{CORBA
   interface}.
 
-The way the \href{http://random.org}{random.org} random number generator
+The way the \href{https://www.random.org}{random.org} random number generator
 works is quite simple. A radio is tuned into a frequency where nobody is
 broadcasting. The atmospheric noise picked up by the receiver is fed into a
 Sun SPARC workstation through the microphone port where it is sampled by a
@@ -171,7 +172,7 @@ several ways of performing skew correction, though, and has a number of
 drawbacks. First, it takes an indeterminate number of input bits. Second, it
 is quite inefficient, resulting in the loss of 75\% of the data, even when
 the bit stream is already unbiased.
-\href{http://www.cis.ohio-state.edu/htbin/rfc/rfc1750.html}{RFC1750}
+\href{https://datatracker.ietf.org/doc/html/rfc1750}{RFC1750}
 discusses skew correction in general and lists this method as well as three
 others. Paul Crowley discusses
 \href{http://www.ciphergoth.org/crypto/unbiasing/}{skew correction for use
@@ -195,14 +196,14 @@ difficult it is to predict a given number on the basis of the preceding
 numbers in the series. A sequence of good random numbers will have a high
 level of entropy, although a high level of entropy does not guarantee
 randomness. (As an example, a file compressed with a software compressor such
-as \href{http://www.gzip.org}{gzip} or \href{http://www.winzip.com}{winzip}
+as \href{https://www.gzip.org}{gzip} or \href{https://www.winzip.com}{winzip}
 has a high level of entropy, but the data is highly structured and therefore
 not random.) Hence, for a thorough test of a random number generator,
 computing the level of entropy in the numbers alone is not enough.
 
 A number of basic tests, such as the entropy test described above, were
-implemented by John Walker from \href{http://www.fourmilab.ch/}{Fourmilab} in
-form of his \href{http://www.fourmilab.ch/random/}{ent} program. Here is what
+implemented by John Walker from \href{https://www.fourmilab.ch/}{Fourmilab} in
+form of his \href{https://www.fourmilab.ch/random/}{ent} program. Here is what
 John's program said about one megabyte of numbers from random.org:
 
 \begin{verbatim}
@@ -219,44 +220,47 @@ John's program said about one megabyte of numbers from random.org:
   Serial correlation coefficient is 0.000417 (totally uncorrelated = 0.0).
 \end{verbatim}
 
-John's \href{http://www.fourmilab.ch/random/}{documentation for the ent
+John's \href{https://www.fourmilab.ch/random/}{documentation for the ent
   program} contains detailed explanations of each test, but they generally
 show the random.org numbers to be quite good.  The Chi Square test is
 probably the most commonly used test for randomness, and numbers pass this
 test if the percentage figure falls between 10\% and 90\%. Every single
 number generated at random.org is subjected to John Walker's tests and the
 results are logged. The last twenty log entries at any time can be seen on
-the \href{http://random.org/stats/}{online statistics page}.
+the \href{https://www.random.org/stats/}{online statistics page}.
 
 There are also other test suites for testing the quality of random numbers. A
-popular one is the \href{http://stat.fsu.edu/~geo/diehard.html}{Diehard}
+popular one is the \href{https://en.wikipedia.org/wiki/Diehard_tests}{Diehard}
 program by George Marsaglia. Unfortunately, this test suite seems not to have
 been maintained for the last few years.
 
 In April 2001, Louise Foley, a student of statistics at
-\href{http://www.tcd.ie/}{Trinity College}, Dublin submitted a comprehensive
+\href{https://www.tcd.ie/}{Trinity College}, Dublin submitted a comprehensive
 analysis of random.org's numbers as her final year project. As part of the
 project, Louise identified and implemented a series of five tests
 particularly suitable for true random numbers and compared the quality of the
 numbers generated at random.org with those generated by Silicon Graphics'
-\href{http://www.lavarnd.org/}{lavarand} generator. Both generators passed
-the tests. Louise's report is \href{http://random.org/report/}{available online}.
+'lavarand' generator. Both generators passed
+the tests. Louise's report is \href{https://www.random.org/analysis/}{available online}.
 
 \section*{Suggested Online Reading}
 
 \begin{itemize}
 \item
-  \href{http://www.cis.ohio-state.edu/hypertext/faq/usenet/cryptography-faq/top.html}{The
+  \href{http://www.faqs.org/faqs/cryptography-faq/}{The
     Cryptography FAQ} is a good introduction to cryptography.
-\item \href{http://www.cis.ohio-state.edu/htbin/rfc/rfc1750.html}{RFC1750}
+\item \href{https://datatracker.ietf.org/doc/html/rfc1750}{RFC1750}
   discusses randomness for computer security purposes.
-\item \href{http://www.interhack.net/people/cmcurtin/snake-oil-faq.html}{The
-    Snake Oil FAQ} warns that crypto software varies a great deal in quality
-  and gives guidelines as how to judge a given product.
+\item The Snake Oil FAQ (formerly at
+  \texttt{https://www.faqs.org/faqs/cryptography-faq/snake-oil/},
+    summarized
+    \href{https://en.wikipedia.org/wiki/Snake_oil_(cryptography)}{at this
+      Wikipedia page}) warns that crypto software varies a great deal in
+    quality and gives guidelines as how to judge a given product. 
 \item \href{http://www.robertnz.net/true_rng.html}{True Random Numbers}
   contains a review of several commercial hardware devices for true random
   number generation.
-\item \href{http://www.cs.berkeley.edu/~daw/rnd/}{Randomness for Crypto}
+\item Randomness for Crypto (formerly at \texttt{http://www.cs.berkeley.edu/~daw/rnd/})
   contains a large selection of links to online articles on randomness.
 \end{itemize}
 
