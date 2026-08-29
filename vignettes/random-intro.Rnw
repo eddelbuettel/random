@@ -31,7 +31,7 @@
 \newcommand{\pkg}[1]{{\normalfont\fontseries{b}\selectfont #1}}
 
 %% shortcuts
-\newcommand{\randomorg}{\href{http://random.org}{random.org}}
+\newcommand{\randomorg}{\href{https://www.random.org}{random.org}}
 
 \begin{document}
 
@@ -46,11 +46,12 @@
 library(random)
 options(SweaveHooks=list(twofig=function() {par(mfrow=c(1,2))},
                          twofig2=function() {par(mfrow=c(2,1))},
-                         onefig=function() {par(mfrow=c(1,1))}))
+                         onefig=function() {par(mfrow=c(1,1))}),
+        width=70)
 @
 
 \title{\pkg{random}:  An \proglang{R} package for true random numbers}
-\author{\href{http://dirk.eddelbuettel.com}{Dirk Eddelbuettel}}
+\author{\href{https://dirk.eddelbuettel.com}{Dirk Eddelbuettel}}
 \date{August 2006}
 
 \maketitle
@@ -98,7 +99,9 @@ generator. Package \pkg{SuppDists} \citep{SuppDists:2006} provides another
 RNG.  Quasi-random number generators are provided by the Rmetrics component
 package \pkg{fOptions} \citep{fOptions:2006}. Lastly, RNGs suitable for
 distributed computing are available via \pkg{rsprng} \citep{rsprng:2006} and
-\pkg{rstream} \citep{rstream:2006}.
+\pkg{rstream} \citep{rstream:2006}. The CRAN Task Views \citep{ctv2025} for
+Distributions \citep{ctvDistributions} and High-Performance Computing
+\citep{ctvHPC} contain additional resources.
 
 All of these packages have one major commonality: they produce pseudo random
 numbers determined by `software': an algorithm implemented as executable
@@ -357,8 +360,8 @@ distributed according to the requested $U(0,1)$ distribution.
 
 <<<stats, echo=TRUE, fig=FALSE, results=hide>>=
 summary(randomOrg)
-apply(randomOrg, 2, function(X) quantile(X,c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99), digits=4))
-#
+apply(randomOrg, 2, function(X) quantile(X,c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75,
+                                             0.9, 0.95, 0.99), digits=4))
 @
 
 Further analysis using a simple scatter plot of half the uniform random

@@ -1,9 +1,11 @@
+@String{CRAN = "https://CRAN.R-Project.org/" }
+@String{DOI = "10.32614/CRAN.package." }
 
 @Manual{Brown:dieharder:2006,
   author = 	 {Robert G. Brown},
   title = 	 {\texttt{dieharder}: {A} Random Number Test Suite},
-  year =	 2006,
-  url = 	 {http://www.phy.duke.edu/~rgb/General/dieharder.php},
+  year =	 2026,
+  url = 	 {https://physics.duke.edu/~rgb/General/dieharder.php},
   note 	= 	 {\proglang{C} program archive \pkg{dieharder}, version 1.4.24}
 }
 
@@ -15,6 +17,37 @@
   note = 	 {Via email}
 }
 
+@Article{ctv2025,
+  title =        {The {CRAN} {T}ask {V}iew {I}nitiative},
+  author =       {Achim Zeileis and Roger Bivand and Dirk Eddelbuettel
+                  and Kurt Hornik and Julia Piaskowski and Nathalie
+                  Vialaneix},
+  year =         {2025},
+  journal =      {The R Journal},
+  volume =       {17},
+  number =       {2},
+  pages =        {4--14},
+  doi =          {10.32614/RJ-2025-011},
+}
+
+@Manual{ctvDistributions,
+  author =       {Christophe Dutang and Patrice Kiener and Bruce
+                  J. Swihart},
+  title =        {CRAN Task View: Probability Distributions},
+  year =         {2026},
+  note =         {Version 2026-08-21},
+  url =          {https://CRAN.R-project.org/view=Distributions},
+}
+
+@Manual{ctvHPC,
+  author =       {Dirk Eddelbuettel},
+  title =        {CRAN Task View: High-Performance and Parallel
+                  Computing with R},
+  year =         {2026},
+  note =         {Version 2026-05-06},
+  url =          {https://CRAN.R-project.org/view=HighPerformanceComputing},
+}
+
 @Manual{Davies:2000,
   author =	 {Robert B. Davies},
   title =	 {Hardware random number generators},
@@ -22,7 +55,7 @@
   note =	 {Presented at the 5th Australian Statistics Conference, 
                   July 2000, and the 51st conference of the NZ Statistical 
                   Association in September, 2000. Published as 
-                  \href{http://www.robertnz.net/hwrng.htm}{http://www.robertnz.net/hwrng.htm} (Accessed 10-August-2006)}
+                  \href{https://www.robertnz.net/hwrng.htm}{http://www.robertnz.net/hwrng.htm} (Accessed 10-August-2006)}
 }
 
 @Manual{Haahr:1999,
@@ -30,14 +63,14 @@
   title =	 {\texttt{random.org}: {I}ntroduction to Randomness and 
 		  Random Numbers},
   year =	 1999,
-  note =	 {Published as \href{http://random.org/essay.html}{\url{http://random.org/essay.html}} and also available as vignette \texttt{random-essay} in \proglang{R} package \pkg{random}.}
+  note =	 {Published as \href{https://www.random.org/randomness/}{\url{https://www.random.org/randomness/}} and also available as vignette \texttt{random-essay} in \proglang{R} package \pkg{random}.}
 }
 
 @misc{Haahr:2006,
   author = 	 {Mads Haahr},
   title = 	 {random.org: {T}rue random number service},
   year =	 2006,
-  url = 	 {http://random.org},
+  url = 	 {https://www.random.org},
   note 	= 	 {(accessed 6-August-2006)}
 }
 
@@ -46,8 +79,7 @@
   title = 	 {The Marsaglia Random Number CDROM including the Diehard 
 		  Battery of Tests of Randomness},
   year =	 1995,
-  url = 	 {http://stat.fsu.edu/pub/diehard},
-  note 	= 	 {(accessed 6-August-2006)}
+  url = 	 {https://en.wikipedia.org/wiki/Diehard_tests}
 }
 
 @Manual{R:2006,
@@ -56,9 +88,10 @@
   author       = {{\proglang{R} Development Core Team}},
   organization = {\proglang{R} Foundation for Statistical Computing},
   address      = {Vienna, Austria},
-  year         = {2006},
+  year         = {2026},
   note         = {{ISBN} 3-900051-07-0},
-  url          = {http://www.R-project.org/}
+  doi = 	 "10.32614/R.manuals",
+  url =          {https://www.R-project.org/}  
 }
 
 @Manual{SuppDists:2006,
@@ -66,7 +99,7 @@
   author 	= {Bob Wheeler},
   year 		= {2006},
   note 		= {\proglang{R} package \pkg{SuppDists}, version 1.1-0},
-  url 		= {http://www.bobwheeler.com/stat},
+  url 		= {https://www.bobwheeler.com/stat},
 }
 
 @Manual{fOptions:2006,
@@ -74,8 +107,9 @@
                    Teaching Financial Engineering and Computational Finance},
   author 	= {Diethelm Wuertz},
   year 		= {2006},
-  note 		= {\proglang{R} package \pkg{fOptions}, version 221.10065},
-  url 		= {http://www.Rmetrics.org/},
+  note 		= {\proglang{R} package \pkg{fOptions}, version 221.10065, now archived},
+  oldurl 	= {https://www.Rmetrics.org/},
+  url           = CRAN # fOptions
 }
 
 @Manual{gsl:2006,
@@ -84,7 +118,7 @@
   year 		= {2006},
   note          = {{ISBN} 0954161734},
   pages         = 620,
-  url 		= {http://www.gnu.org/software/gsl},
+  url 		= {https://www.gnu.org/software/gsl/},
 }
 
 @Manual{gsl:R:2005,
@@ -92,7 +126,8 @@
   author 	= {Robin Hankin},
   year 		= {2005},
   note 		= {\proglang{R} package \pkg{gsl}, version 1.6.6},
-  url 		= {http://cran.r-project.org/src/contrib/Descriptions/gsl.html},
+  oldurl	= CRAN # "package=gsl",
+  doi           = DOI # "gsl"
 }
 
 @Manual{randaes:2005,
@@ -100,8 +135,9 @@
 		   cipher},
   author 	= {Thomas Lumley},
   year 		= {2005},
-  note 		= {\proglang{R} package \pkg{randaes}, version 0.1},
-  url 		= {http://cran.r-project.org/src/contrib/Descriptions/randaes.html},
+  note 		= {\proglang{R} package \pkg{randaes}, version 0.1, now archived},
+  oldurl 	= CRAN # "package=randaes",
+  url		= DOI # "randaes"
 }
 
 @Manual{rsprng:2006,
@@ -109,34 +145,36 @@
 		  {P}ortable {R}andom {N}umber {G}eneratos)},
   author 	= {Na Li},
   year 		= {2006},
-  note 		= {\proglang{R} package \pkg{rsprng}, version 0.3-3},
-  url 		= {http://www.biostat.umn.edu/~nali/SoftwareListing.html},
+  note 		= {\proglang{R} package \pkg{rsprng}, version 0.3-3, now archived},
+  deadurl 	= {https://cran.r-project.org/src/contrib/Archive/rsprng/}
 }
 
 @Manual{rstream:2006,
   title 	= {\pkg{rstream}: {S}treams of random nummbers},
   author 	= {Josef Leybold},
-  year 		= {2006},
+  year 		= {2022},
   note 		= {\proglang{R} package \pkg{rstream}, version 1.2},
-  url 		= {http://statistik.wu-wien.ac.at/arvag/},
+  url           = DOI # "rstream"
 }
 
 
 @Manual{tseries:2006,
     title 	= {\pkg{tseries}: {T}ime Series Analysis and Computational 
 		  Finance}, 
-    author 	= {Adrian Trapletti and Kurt Hornik},
-    year 	= 2006,
-    note 	= {\proglang{R} package \pkg{tseries}, version 0.10-3},
-    url 	= {http://cran.r-project.org/src/contrib/Descriptions/tseries.html},
+    author 	= {Adrian Trapletti and Kurt Hornik and Blake LeBaron},
+    year 	= 2026,
+    note 	= {\proglang{R} package \pkg{tseries}, version 0.10-63},
+    oldurl 	= CRAN # "package=tseries",
+    url		= DOI # "tseries"
  }
 
 @Manual{sudoku:2006,
     title 	= {\pkg{sudoku}: {S}udoku puzzle generator and solver}, 
     author 	= {David Brahm and Greg Snow},
-    year 	= 2006,
-    note 	= {\proglang{R} package \pkg{sudoku}, version 2.0},
-    url 	= {http://cran.r-project.org/src/contrib/Descriptions/sudoku.html},
+    year 	= 2022,
+    note 	= {\proglang{R} package \pkg{sudoku}, version 2.8},
+    oldurl 	= CRAN # "package=sudoku",
+    url 	= DOI # "sudoku"
  }
 
 @misc{wp:hardware_rng,
@@ -144,7 +182,7 @@
    title 	= {Hardware random number generator},
    howpublished = {In \textsl{Wikipedia{,} The Free Encyclopedia}},
    year 	= 2006,
-   url 		= {http://en.wikipedia.org/w/index.php?title=Hardware_random_number_generator&oldid=68022952},
+   url 		= {https://en.wikipedia.org/w/index.php?title=Hardware_random_number_generator&oldid=68022952},
    note 	= {(accessed 6-August-2006)},
    annote 	= {Original title:  Hardware random number generator --- Wikipedia{,} The Free Encyclopedia}
 }

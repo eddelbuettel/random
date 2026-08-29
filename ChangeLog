@@ -1,5 +1,11 @@
 2026-08-29  Dirk Eddelbuettel  <edd@debian.org>
 
+	* vignettes/random-intro.bib: Refreshed several URLs and entries
+	* vignettes/random-intro.Rnw: Idem, also added two references
+	* vignettes/random-intro.pdf: Rerendered, added two references
+	* vignettes/random-essay.Rnw: Refreshed one URL
+	* vignettes/random-essay.pdf: Rerendered
+
 	* .github/workflows/ci.yaml: Switch to actions/checkout@v7
 
 2026-01-05  Dirk Eddelbuettel  <edd@debian.org>

@@ -36,7 +36,7 @@
 \date{June 1999\footnote{ This vignette for the \textsf{R} package
     \texttt{random} is a transcribed version of the original essay by Mads
     Haahr that was published in 1999 and is still available at
-    \href{http://random.org/essay.html}{\url{http://random.org/essay.html}}.
+    \href{https://random.org/essay.html}{\url{https://random.org/essay.html}}.
     Hyperlinks from the original html document are also present in the pdf
     version.  All errors introduced in the transformation from html to
     \LaTeX\ are solely the responsibility of the \textsf{R} package
