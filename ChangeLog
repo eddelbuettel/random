@@ -7,6 +7,7 @@
 	* vignettes/random-essay.pdf: Rerendered
 	* man/random.Rd: Refreshed two URLs
 	* README.md: Replaced FSF URL for GPL-2 with R-Project.org one
+	* R/random.R: Use inherits() to test object class
 
 	* .github/workflows/ci.yaml: Switch to actions/checkout@v7
 

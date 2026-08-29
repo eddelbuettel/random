@@ -1,7 +1,7 @@
 
 ##  random -- An R interface to the random.org service
 ##
-##  Copyright (C) 2006 - 2015  Dirk Eddelbuettel <edd@debian.org>
+##  Copyright (C) 2006-2026  Dirk Eddelbuettel <edd@debian.org>
 ##
 ##  This file is part of random
 ##
@@ -101,8 +101,8 @@ randomStrings <- function(n=10, len=5, digits=TRUE,
         stop("Random string requests must be between 1 and 10,000 numbers")
     if (len < 1 || len > 20)
         stop("Random string length must be between 1 and 20")
-    if (class(digits)!="logical" || class(upperalpha)!="logical" ||
-        class(loweralpha)!="logical" || class(unique)!="logical") 
+    if (!inherits(digits,"logical") || !inherits(upperalpha,"logical") ||
+        !inherits(loweralpha,"logical") || !inherits(unique,"logical"))
         stop("The 'digits', '(lower|upper)alpha' and 'unique' arguments has to be logical")
     if ( !digits && !upperalpha && !loweralpha)
         stop("The 'digits', 'loweralpha' and 'loweralpha' cannot all be false at the same time")
