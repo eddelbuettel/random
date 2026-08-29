@@ -8,7 +8,7 @@
 \title{True random numbers from random.org}
 \description{
   The \code{random} package provides several functions that
-  access the true random number service at \url{http://random.org}.
+  access the true random number service at \url{https://www.random.org}.
 
   \code{randomNumber} retrieves random integers with duplicates,
   \code{randomSequence} retrieves random sequences without
@@ -55,13 +55,13 @@
   \code{quotaCheck} is a simple convenience wrapper which tests
   whether the return from \code{randomBufferStatus()} is a positive number.
 } \details{
-  The \url{http://random.org} services uses atmospheric noise sample
+  The \url{https://www.random.org} services uses atmospheric noise sample
   via a radio tuned to an unused broadcast frequency together with a
   skew correction originally due to John von Neumann. Please see the
   included \code{vignette} for more details. 
 }
 \references{
-  The \code{random.org} website at \url{http://www.random.org}.
+  The \code{random.org} website at \url{https://www.random.org}.
   Also see the included vignette for further references.
 }
 \author{Dirk Eddelbuettel \email{edd@debian.org} for the
