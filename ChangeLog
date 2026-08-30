@@ -1,9 +1,11 @@
 2026-08-29  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Version, Date): Release 0.2.7
+
 	* vignettes/random-intro.bib: Refreshed several URLs and entries
 	* vignettes/random-intro.Rnw: Idem, also added two references
 	* vignettes/random-intro.pdf: Rerendered, added two references
-	* vignettes/random-essay.Rnw: Refreshed one URL
+	* vignettes/random-essay.Rnw: Refreshed several URLs
 	* vignettes/random-essay.pdf: Rerendered
 	* man/random.Rd: Refreshed two URLs
 	* README.md: Replaced FSF URL for GPL-2 with R-Project.org one
